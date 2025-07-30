@@ -43,12 +43,10 @@ const Feedbacks = () => {
             className="bg-[#192339] border-none text-white p-5 rounded-lg"
           >
             <div>
-              <p className="flex items-center gap-x-2">
-                <div>
-                  <p className="text-lg">{item.name}</p>
-                  <p className="text-zinc-400 text-sm">{item.title}</p>
-                </div>
-              </p>
+              <div className="flex items-center gap-x-2">
+                <p className="text-lg">{item.name}</p>
+                <p className="text-zinc-400 text-sm">{item.title}</p>
+              </div>
               <div className="pt-4 px-0">{item.description}</div>
             </div>
           </div>
