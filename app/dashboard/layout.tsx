@@ -6,7 +6,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className=" flex w-full">
       <SideNav />
-      <div className=" relative w-full ml-[17%] ">
+      <div className=" relative w-full ml-[17%] px-24">
         <DashNav />
         {children}
       </div>

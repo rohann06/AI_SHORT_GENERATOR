@@ -5,7 +5,7 @@ import { RiCopperCoinFill } from "react-icons/ri";
 
 const DashNav = () => {
   return (
-    <div className=" lg:px-10 flex items-center gap-x-5 justify-end py-[20px]">
+    <div className=" flex items-center gap-x-5 justify-end py-[20px]">
       <p className="flex items-center text-xl font-medium">
         <RiCopperCoinFill className=" text-2xl text-orange-400 hover:animate-caret-blink" />
         30

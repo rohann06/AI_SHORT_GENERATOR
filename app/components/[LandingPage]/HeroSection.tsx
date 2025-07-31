@@ -17,7 +17,7 @@ const HeroSection = () => {
                 "Short Stories",
                 "Animated Videos",
                 "Videos with subtitels",
-                "Reels",
+                "Insta Reels",
               ],
               autoStart: true,
               loop: true,
