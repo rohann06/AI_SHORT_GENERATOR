@@ -45,7 +45,7 @@ const Topics = () => {
               onChange={(e) => setCustomPrompt(e.target.value)}
               name="customPrompt"
               placeholder="Enter your custom prompt here..."
-              className="w-full rounded-lg border-2 border-b-gray-400 outline-none p-5 font-semibold min-h-[150px]"
+              className="w-full rounded-lg border-2 border-b-gray-400 outline-none p-5 font-semibold"
             />
           </div>
         )}

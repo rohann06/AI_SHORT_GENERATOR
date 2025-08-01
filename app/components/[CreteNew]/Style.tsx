@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { useCreateNewStore } from "@/store/store";
 
 const styles = [
   {
@@ -25,6 +25,9 @@ const styles = [
 ];
 
 const Style = () => {
+  const selectedStyle = useCreateNewStore((state) => state.style);
+  const setStyle = useCreateNewStore((state) => state.setStyle);
+
   return (
     <div>
       <div>
@@ -33,22 +36,64 @@ const Style = () => {
           Select Your Video Style
         </p>
       </div>
-      <div className=" flex items-center gap-x-10 py-5">
+      <div className="flex items-center gap-x-10 py-5">
         {styles?.map((style, i) => (
-          <div className=" flex flex-col items-center">
-            <div
-              className=" h-[200px] w-[150px] rounded-xl overflow-hidden hover:scale-105 duration-300"
-              key={i}
-            >
+          <div
+            className="flex flex-col items-center cursor-pointer group"
+            key={i}
+            onClick={() => setStyle(style.name)}
+          >
+            <div className="relative h-[200px] w-[150px] rounded-xl overflow-hidden hover:scale-105 duration-300">
               <Image
                 src={style.image}
-                alt="image"
+                alt={style.name}
                 height={400}
                 width={400}
-                className=" w-full h-full bg-cover"
+                className="w-full h-full object-cover"
+                priority={i < 3} // Optional: prioritize loading first few images
               />
+              {/* Overlay */}
+              <div
+                className={`
+                absolute inset-0 
+                ${
+                  selectedStyle === style.name
+                    ? "bg-violet-500/30"
+                    : "group-hover:bg-black/20"
+                }
+                transition-all duration-300
+                flex items-center justify-center
+              `}
+              >
+                {selectedStyle === style.name && (
+                  <div className="bg-violet-500 text-white p-2 rounded-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </div>
             </div>
-            <p className=" text-lg font-medium">{style.name}</p>
+            <p
+              className={`text-lg font-medium mt-2 ${
+                selectedStyle === style.name
+                  ? "text-violet-500"
+                  : "text-gray-800"
+              }`}
+            >
+              {style.name}
+            </p>
           </div>
         ))}
       </div>
