@@ -17,7 +17,13 @@ const CreateNewForm = () => {
 
     const state = useCreateNewStore.getState();
 
-    const prompt = `Write a script to generate ${state.duration} video on topic : ${state.type} story along with AI image prompt in ${state.style} Tformat for each scene and give me result in JSON format with imagePrompt and ContentText as field`;
+    const prompt = `Write a script to generate ${
+      state.duration
+    } video on topic : ${
+      state.type == "Custom Prompt" ? state.customPrompt : state.type
+    } story along with AI image prompt in ${
+      state.style
+    } Tformat for each scene and give me result in JSON format with imagePrompt and ContentText as field`;
 
     try {
       const response = await axios.post("/api/generate-content", {
