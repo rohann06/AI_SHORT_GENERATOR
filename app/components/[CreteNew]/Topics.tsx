@@ -8,6 +8,7 @@ const types = [
   "Historical Facts",
   "Bed Type Stories",
   "Motivational",
+  "True Crime",
   "Fun Facts",
 ];
 

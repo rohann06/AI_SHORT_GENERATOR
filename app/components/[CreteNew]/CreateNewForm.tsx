@@ -17,13 +17,15 @@ const CreateNewForm = () => {
 
     const state = useCreateNewStore.getState();
 
-    const prompt = `Write a script to generate ${
-      state.duration
-    } video on topic : ${
-      state.type == "Custom Prompt" ? state.customPrompt : state.type
-    } story along with AI image prompt in ${
-      state.style
-    } Tformat for each scene and give me result in JSON format with imagePrompt and ContentText as field`;
+    const prompt = `Write a script to generate ${state.duration} video on topic : ${state.type} story along with AI image prompt in ${state.style} Tformat for each scene and add image prompt with it. Do not Add Anything in Braces, Just return the plain story in text Give me response in JSON format and follow the schema
+    {
+    scripts:[
+    {
+    content:"",
+    imagePrompt:""
+    },
+    ],
+    }`;
 
     try {
       const response = await axios.post("/api/generate-content", {

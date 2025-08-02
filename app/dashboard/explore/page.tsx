@@ -1,12 +1,12 @@
 import PageHeader from "@/app/components/[Dashboard]/PageHeader";
 import React from "react";
 
-const Profile = () => {
+const explore = () => {
   return (
     <div>
-      <PageHeader title={"Profile"} />
+      <PageHeader title={"Explore"} />
     </div>
   );
 };
 
-export default Profile;
+export default explore;
