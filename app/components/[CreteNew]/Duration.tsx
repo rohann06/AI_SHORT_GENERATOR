@@ -8,14 +8,14 @@ const Duration = () => {
   return (
     <div>
       <div>
-        <p className="text-2xl font-black text-violet-500">Duration</p>{" "}
-        {/* Updated title */}
-        <p className="text-sm font-semibold text-gray-400">
+        <p className="text-xl lg:text-2xl font-black text-violet-500">
+          Duration
+        </p>{" "}
+        <p className="text-xs lg:text-sm font-semibold text-gray-400">
           Select your video duration
         </p>{" "}
-        {/* Updated subtitle */}
       </div>
-      <div className="pt-3 pb-7">
+      <div className="pt-3 pb-5 lg:pb-7">
         <select
           value={duration}
           onChange={(e) => setDuration(e.target.value)}

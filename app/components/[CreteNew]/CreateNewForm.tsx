@@ -48,10 +48,12 @@ const CreateNewForm = () => {
       {/* Loading Modal */}
       {isLoading && (
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-xl max-w-md w-full mx-4 text-center">
-            <div className="text-6xl mb-4 animate-bounce">🤖</div>
-            <h3 className="text-xl font-bold mb-2">Generating Your Content</h3>
-            <p className="text-gray-600 mb-4">
+          <div className="bg-white p-5 lg:p-8 rounded-xl max-w-md w-full mx-4 text-center">
+            <div className="lg:text-6xl text-4xl mb-4 animate-bounce">🤖</div>
+            <h3 className="text-lg lg:text-xl font-bold mb-2">
+              Generating Your Content
+            </h3>
+            <p className="text-gray-600 mb-4 text-sm lg:text-base">
               Our AI robots are working hard to create something amazing for
               you!
             </p>
@@ -62,7 +64,7 @@ const CreateNewForm = () => {
       {/* Main Form */}
       <form
         onSubmit={handleSubmit}
-        className="my-10 shadow-2xl lg:px-10 lg:py-10"
+        className="lg:my-10 lg:shadow-2xl lg:px-10 lg:py-10"
       >
         <Topics />
         <Style />
@@ -77,7 +79,7 @@ const CreateNewForm = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className={`mt-8 bg-violet-500 text-white text-lg font-bold py-3 w-full text-center hover:bg-violet-600 cursor-pointer rounded-xl transition-colors ${
+          className={`my-5 lg:mt-8 bg-violet-500 text-white text-lg font-bold py-3 w-full text-center hover:bg-violet-600 cursor-pointer rounded-xl transition-colors ${
             isLoading ? "opacity-70 cursor-not-allowed" : ""
           }`}
         >

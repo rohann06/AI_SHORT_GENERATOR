@@ -20,8 +20,10 @@ const Topics = () => {
   return (
     <div>
       <div>
-        <p className="text-2xl font-black text-violet-500">Content</p>
-        <p className="text-sm font-semibold text-gray-400">
+        <p className=" text-xl lg:text-2xl font-black text-violet-500">
+          Content
+        </p>
+        <p className="lg:text-sm text-xs font-semibold text-gray-400">
           Which Is The Topic Of Your Video?
         </p>
       </div>
