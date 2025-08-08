@@ -1,5 +1,4 @@
 import { create } from "zustand";
-
 type CreateNewStore = {
   type: string;
   customPrompt: string;

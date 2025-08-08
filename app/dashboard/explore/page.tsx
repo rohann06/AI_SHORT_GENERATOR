@@ -4,7 +4,7 @@ import React from "react";
 const explore = () => {
   return (
     <div>
-      <PageHeader title={"Explore"} />
+      <p>Rohan</p>
     </div>
   );
 };

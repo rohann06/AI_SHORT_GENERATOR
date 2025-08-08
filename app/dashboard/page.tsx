@@ -7,7 +7,6 @@ import AllShorts from "../components/[Dashboard]/AllShorts";
 const page = () => {
   return (
     <div className=" ">
-      <PageHeader title={"Dashboard"} />
       <AllShorts />
     </div>
   );

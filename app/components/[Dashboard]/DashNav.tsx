@@ -1,27 +1,33 @@
+"use client";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import React from "react";
-import { GiVibratingShield } from "react-icons/gi";
-import { RiCopperCoinFill } from "react-icons/ri";
+import { useUser } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
+import PageHeader from "./PageHeader";
 
 const DashNav = () => {
+  const { user } = useUser();
+  const path = usePathname();
   return (
-    <div className=" flex items-center gap-x-5 justify-end py-[20px]">
-      <p className="flex items-center text-xl font-medium">
-        <RiCopperCoinFill className=" text-2xl text-orange-400 hover:animate-caret-blink" />
-        30
-      </p>
-      <SignedIn>
-        <UserButton
-          appearance={{
-            elements: {
-              userButtonAvatarBox: {
-                width: "2.1rem",
-                height: "2.1rem",
+    <div className=" flex items-center justify-between py-[20px]">
+      <PageHeader />
+      <div className=" flex items-center gap-x-2 justify-end">
+        <SignedIn>
+          <UserButton
+            appearance={{
+              elements: {
+                userButtonAvatarBox: {
+                  width: "2rem",
+                  height: "2rem",
+                },
               },
-            },
-          }}
-        />
-      </SignedIn>
+            }}
+          />
+          <p className=" text-sm font-semibold lg:block hidden">
+            {user?.fullName}
+          </p>
+        </SignedIn>
+      </div>
     </div>
   );
 };

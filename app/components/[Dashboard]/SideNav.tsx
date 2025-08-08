@@ -69,7 +69,7 @@ const SideNav = () => {
       {/* Upgrade Option */}
       <div className=" px-5 mt-64">
         <div className=" flex flex-col gap-y-5 items-center w-full bg-gray-100 px-5 rounded-xl py-3">
-          <div className=" flex items-center gap-x-16 justify-between">
+          <div className=" flex items-center gap-x-26 justify-between">
             <IoDiamond className=" text-xl" />
             <p className=" text-sm font-semibold text-gray-400">
               <span className=" font-bold text-lg text-gray-500">30</span>{" "}
