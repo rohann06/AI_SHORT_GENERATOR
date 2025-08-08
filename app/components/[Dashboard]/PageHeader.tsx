@@ -9,16 +9,24 @@ const PageHeader = () => {
   return (
     <div>
       {path === "/dashboard" && (
-        <p className=" text-[22px] font-black underline">Dashboard</p>
+        <p className=" text-[18px] lg:text-[22px] font-black underline">
+          Dashboard
+        </p>
       )}
       {path === "/dashboard/createNew" && (
-        <p className=" text-[22px] font-black underline">Create New</p>
+        <p className=" text-[18px] lg:text-[22px] font-black underline">
+          Create New
+        </p>
       )}
       {path === "/dashboard/explore" && (
-        <p className=" text-[22px] font-black underline">Explore</p>
+        <p className=" text-[18px] lg:text-[22px] font-black underline">
+          Explore
+        </p>
       )}
       {path === "/dashboard/upgrade" && (
-        <p className=" text-[22px] font-black underline">Upgrade</p>
+        <p className=" text-[18px] lg:text-[22px] font-black underline">
+          Upgrade
+        </p>
       )}
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 
 const ShortsCard = () => {
   return (
-    <div className="relative h-[450px] w-[270px] rounded-xl overflow-hidden group shadow-2xl">
+    <div className="relative h-[450px] w-[270px] rounded-xl overflow-hidden group shadow-2xl lg:mb-0 mb-7">
       {/* Image */}
       <Image
         src={"/login.jpg"}

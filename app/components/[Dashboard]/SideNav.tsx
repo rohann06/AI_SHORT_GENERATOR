@@ -3,36 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-// Icons
-import { BsFileEarmarkPlay } from "react-icons/bs";
-import { GiArmorUpgrade } from "react-icons/gi";
-import { IoDiamond } from "react-icons/io5";
-import { MdOutlineDashboard } from "react-icons/md";
-import { RiVideoOnAiFill } from "react-icons/ri";
-import { FaSearch } from "react-icons/fa";
+import { navops } from "@/consts/navdb";
 
-const sideNavOps = [
-  {
-    name: "Dashboard",
-    href: "/dashboard",
-    icon: <MdOutlineDashboard />,
-  },
-  {
-    name: "Create New",
-    href: "/dashboard/createNew",
-    icon: <BsFileEarmarkPlay />,
-  },
-  {
-    name: "Explore",
-    href: "/dashboard/explore",
-    icon: <FaSearch />,
-  },
-  {
-    name: "Upgrade",
-    href: "/dashboard/upgrade",
-    icon: <GiArmorUpgrade />,
-  },
-];
+// Icons
+import { IoDiamond } from "react-icons/io5";
+import { RiVideoOnAiFill } from "react-icons/ri";
 
 const SideNav = () => {
   const path = usePathname();
@@ -51,7 +26,7 @@ const SideNav = () => {
       {/* Sidenav Options */}
 
       <div className=" flex flex-col gap-y-5 py-20 px-5">
-        {sideNavOps?.map((option, i) => (
+        {navops?.map((option, i) => (
           <Link
             key={i}
             href={option.href}

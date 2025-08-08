@@ -4,12 +4,13 @@ import React from "react";
 import { useUser } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import PageHeader from "./PageHeader";
+import MobileNav from "./MobileNav";
 
 const DashNav = () => {
   const { user } = useUser();
-  const path = usePathname();
   return (
     <div className=" flex items-center justify-between py-[20px]">
+      <MobileNav />
       <PageHeader />
       <div className=" flex items-center gap-x-2 justify-end">
         <SignedIn>
